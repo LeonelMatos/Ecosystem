@@ -49,7 +49,7 @@ void kill(const char *s) {
 
 /// @brief Reads a key from STDIN_FILENO
 /// @return Char pressed key
-int readKey() {
+int read_key() {
 	int nread;
 	char input;
 	int c;
@@ -130,7 +130,7 @@ int main () {
 		
 		simulate();
 
-		if (readKey() == 'q'){
+		if (read_key() == 'q'){
 			printf("Exiting...");
 			break;
 		}
