@@ -14,8 +14,8 @@
 #include <errno.h>
 #include "entity.h"
 
-#define R 100 ///Rows of the map
-#define C 120 ///Columns of the map
+#define R 10 ///Rows of the map
+#define C 12 ///Columns of the map
 
 /*DATA*/
 
