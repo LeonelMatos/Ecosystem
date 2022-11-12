@@ -64,6 +64,8 @@ int readKey() {
 	return input;
 }
 
+/*INIT*/
+
 /// @brief Initiates an animal
 /// @param a animal pointer
 /// @param type animal type enum
@@ -85,7 +87,28 @@ void init_map (Map *m, const int r, const int c) {
 			m->map[i][j] = ' ';
 }
 
-void simulate(const int ticks) {
+/*ECOSYSTEM*/
+
+void draw_map(int r, int c, char map[r][c]) {
+
+	for (int i = 0; i < r; i++) {
+		printf("---+");
+	}
+	printf("\n");
+
+	for (int i = 0; i < c; i++) {
+		for (int j = 0; j < r; j++) {
+			printf(" %c ", map[i][j]);
+		}
+		printf("\n");
+	}
+	for (int i = 0; i < r; i++) {
+		printf("---+");
+	}
+	printf("\n");
+}
+
+void simulate() {
 	
 
 	sleep(time_scale);
@@ -101,9 +124,11 @@ int main () {
 
 	init_map(&map, R, C);
 
+	draw_map(R, C, map.map);
+
 	while(activeRun) {
 		
-		simulate(ticks);
+		simulate();
 
 		if (readKey() == 'q'){
 			printf("Exiting...");
