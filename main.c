@@ -15,7 +15,7 @@
 #include "entity.h"
 
 #define R 10 ///Rows of the map
-#define C 12 ///Columns of the map
+#define C 10 ///Columns of the map
 
 /*DATA*/
 
@@ -80,30 +80,37 @@ void init_entity (Entity *a, Type type, Position pos) {
 /// @param m map area pointer
 /// @param r rows
 /// @param c columns
-void init_map (Map *m, const int r, const int c) {
+void init_map (int r, int c, Map *m) {
 	m->num_entities = 0;
 	for (int i = 0; i < r; i++)
 		for (int j = 0; j < c; j++)
 			m->map[i][j] = ' ';
 }
 
+void update_map () {
+	
+}
+
 /*ECOSYSTEM*/
 
 void draw_map(int r, int c, char map[r][c]) {
 
-	for (int i = 0; i < r; i++) {
-		printf("---+");
+	printf(".");
+	for (int i = 0; i < c; i++) {
+		printf("_.");
 	}
 	printf("\n");
 
-	for (int i = 0; i < c; i++) {
-		for (int j = 0; j < r; j++) {
-			printf(" %c ", map[i][j]);
+	for (int i = 0; i < r; i++) {
+		printf("|");
+		for (int j = 0; j < c; j++) {
+			printf("%c|", map[i][j]);
 		}
 		printf("\n");
 	}
-	for (int i = 0; i < r; i++) {
-		printf("---+");
+	printf(".");
+	for (int i = 0; i < c; i++) {
+		printf("_.");
 	}
 	printf("\n");
 }
@@ -121,8 +128,13 @@ int main () {
 	int activeRun = 1;
 
 	Map map;
+	Entity ent1;
+	Position pos;
+	pos.x = 1;
+	pos.y = 1;
 
-	init_map(&map, R, C);
+	init_map(R, C, &map);
+	init_entity(&ent1, Rabbit, pos);
 
 	draw_map(R, C, map.map);
 
