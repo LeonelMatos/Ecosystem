@@ -15,8 +15,8 @@
 #include "entity.h"
 #include "warning.h"
 
-#define R 10 ///Rows of the map
-#define C 10 ///Columns of the map
+#define R 25 ///Rows of the map
+#define C 30 ///Columns of the map
 
 /*DATA*/
 
@@ -142,9 +142,9 @@ void draw_map(int r, int c, char map[r][c]) {
 	for (int i = 0; i < r; i++) {
 		printf("|");
 		for (int j = 0; j < c; j++) {
-			printf("%c|", map[i][j]);
+			printf("%c.", map[i][j]);
 		}
-		printf("\n");
+		printf("|\n");
 	}
 	printf(".");
 	for (int i = 0; i < c; i++) {
