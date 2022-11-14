@@ -55,6 +55,7 @@ int read_key() {
 	char input;
 	int c;
 
+	/// @todo check if I can change this to avoid pressing ENTER every time 
 	while ((nread = read(STDIN_FILENO, &input, 1)) != 1) {
 		if (nread == -1 && errno != EAGAIN)
 			kill("read");
@@ -93,6 +94,7 @@ Entity init_entity (Type type, unsigned int x, unsigned int y) {
 
 void place_entity (Entity *a, Map *m) {
 	if (m->num_entities == R*C/2) warning(ENTITIES_LIMIT);
+	if (a->pos.x > R || a->pos.y > C) warning(OUT_OF_BOUNDS);
 	
 	m->num_entities++;
 	m->entities[m->num_entities-1] = *a;
