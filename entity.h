@@ -1,13 +1,14 @@
 typedef enum
 {
-    Rabbit,
-    Fox,
+    Rabbit='R',
+    Fox='F',
+    Grass='.',
 
 } Type;
 
 typedef struct {
-	int x;
-	int y;
+	unsigned int x;
+	unsigned int y;
 } Position;
 
 typedef struct{

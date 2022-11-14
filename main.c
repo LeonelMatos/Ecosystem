@@ -1,4 +1,4 @@
-/*
+/**
 * @author LeonelMatos [LeonelMatos's Github](https://github.com/LeonelMatos)
 * 
 * Ecosystem - @version 0.0.1
@@ -13,13 +13,14 @@
 #include <unistd.h>
 #include <errno.h>
 #include "entity.h"
+#include "warning.h"
 
 #define R 10 ///Rows of the map
 #define C 10 ///Columns of the map
 
 /*DATA*/
 
-/** \bug Deprecated
+/** \bug Deprecated (the first lines of code)
 * unsigned short int rabbits = 10;
 * unsigned short int foxes = 2;
 */
@@ -40,7 +41,7 @@ unsigned short int ticks = 10;
 
 /*AUX FUNCTIONS*/
 
-/// @brief Error handling function using unistd.h
+/// @brief Error handling that may break the program
 /// @param s Error message
 void kill(const char *s) {
 	perror(s);
@@ -64,16 +65,55 @@ int read_key() {
 	return input;
 }
 
+void warning(const Warning w) {
+	printf("\033[0;31m");
+	printf("\n%s\n", warning_to_string(w));
+	printf("\033[0m");
+	if (read_key() == 'q') kill ("Forced kill program after warning");
+}
+
 /*INIT*/
 
 /// @brief Initiates an animal
 /// @param a animal pointer
 /// @param type animal type enum
-/// @param pos position struct with x,y
-void init_entity (Entity *a, Type type, Position pos) {
-	a->pos = pos;
-	a->type = type;
-	a->pos = pos;
+/// @param x position at x
+/// @param y position at y
+Entity init_entity (Type type, unsigned int x, unsigned int y) {
+	Entity a;
+	Position pos;
+	pos.x = x;
+	pos.y = y;
+
+	a.pos = pos;
+	a.type = type;
+
+	return a;
+}
+
+void place_entity (Entity *a, Map *m) {
+	if (m->num_entities == R*C/2) warning(ENTITIES_LIMIT);
+	
+	m->num_entities++;
+	m->entities[m->num_entities-1] = *a;
+	m->map[a->pos.x][a->pos.y] = a->type;
+}
+
+void kill_entity (unsigned int x, unsigned int y, Map *m) {
+	/// @todo return -1 if entity not found
+	for (unsigned int i = 0; i < m->num_entities; i++) {
+		if (m->entities[i].pos.x == x)
+			if (m->entities[i].pos.y == y){
+				//for loop moving the next entity
+				//to the current index
+				for (unsigned int j = i; j < m->num_entities; j++) {
+					m->entities[j] = m->entities[j+1];
+				}
+
+			}
+	}
+	
+	m->num_entities--;
 }
 
 /// @brief Initiates the map area
@@ -85,10 +125,6 @@ void init_map (int r, int c, Map *m) {
 	for (int i = 0; i < r; i++)
 		for (int j = 0; j < c; j++)
 			m->map[i][j] = ' ';
-}
-
-void update_map () {
-	
 }
 
 /*ECOSYSTEM*/
@@ -128,15 +164,13 @@ int main () {
 	int activeRun = 1;
 
 	Map map;
-	Entity ent1;
-	Position pos;
-	pos.x = 1;
-	pos.y = 1;
-
+	Entity ent1 = init_entity(Rabbit, 1, 1);
+	Entity ent2 = init_entity(Fox, 4, 4);
 	init_map(R, C, &map);
-	init_entity(&ent1, Rabbit, pos);
-
+	place_entity(&ent1, &map);
+	place_entity(&ent2, &map);
 	draw_map(R, C, map.map);
+	printf("\n");
 
 	while(activeRun) {
 		
