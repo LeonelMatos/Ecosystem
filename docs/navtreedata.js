@@ -30,7 +30,9 @@ var NAVTREE =
       [ "Motivation", "index.html#autotoc_md2", null ]
     ] ],
     [ "Links", "index.html#autotoc_md3", null ],
-    [ "Author", "index.html#autotoc_md4", null ],
+    [ "Author", "index.html#autotoc_md4", [
+      [ "Info", "index.html#autotoc_md5", null ]
+    ] ],
     [ "Todo List", "todo.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
