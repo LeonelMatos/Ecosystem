@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['init_5fentity_9',['init_entity',['../main_8c.html#a943ba7af71dd932c60a72c44243f6c36',1,'main.c']]],
-  ['init_5fmap_10',['init_map',['../main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f',1,'main.c']]]
+  ['grass_11',['Grass',['../entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7a283b79b5e51a79e202e0702f189485ad',1,'entity.h']]]
 ];

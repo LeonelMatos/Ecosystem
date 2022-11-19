@@ -251,7 +251,7 @@ html.dark-mode {
     --menu-selected-background: rgba(0,0,0,.4);
 
     --page-background-color: #0b090d;
-    --page-foreground-color: #ffffff;
+    --page-foreground-color: #dddddd;
     --page-secondary-foreground-color: #859399;
     --separator-color: #121215;
     --side-nav-background: #090711;

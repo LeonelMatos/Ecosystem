@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); })
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -118,6 +119,14 @@ Macros</h2></td></tr>
 <tr class="memitem:ac4cf4b2ab929bd23951a8676eeac086b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac4cf4b2ab929bd23951a8676eeac086b">C</a>&#160;&#160;&#160;30</td></tr>
 <tr class="separator:ac4cf4b2ab929bd23951a8676eeac086b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:af6a258d8f3ee5206d682d799316314b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">bool</a> { <a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c">false</a> = 0
+, <a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b">true</a>
+ }</td></tr>
+<tr class="memdesc:af6a258d8f3ee5206d682d799316314b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean type definition.  <a href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">More...</a><br /></td></tr>
+<tr class="separator:af6a258d8f3ee5206d682d799316314b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9a54f17884b9d094426279cc76bc67a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9a54f17884b9d094426279cc76bc67a5">kill</a> (const char *s)</td></tr>
@@ -129,12 +138,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a5dff413cf229bbed61308fd52e9b03e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5dff413cf229bbed61308fd52e9b03e6">warning</a> (const <a class="el" href="warning_8h.html#af6ea07812363481c623a23ea26fbf8ed">Warning</a> w)</td></tr>
 <tr class="separator:a5dff413cf229bbed61308fd52e9b03e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a943ba7af71dd932c60a72c44243f6c36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structEntity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a943ba7af71dd932c60a72c44243f6c36">init_entity</a> (<a class="el" href="entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type, unsigned int x, unsigned int y)</td></tr>
-<tr class="memdesc:a943ba7af71dd932c60a72c44243f6c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates an animal.  <a href="main_8c.html#a943ba7af71dd932c60a72c44243f6c36">More...</a><br /></td></tr>
+<tr class="memdesc:a943ba7af71dd932c60a72c44243f6c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates an entity.  <a href="main_8c.html#a943ba7af71dd932c60a72c44243f6c36">More...</a><br /></td></tr>
 <tr class="separator:a943ba7af71dd932c60a72c44243f6c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a353a2ac96899ae5c4a716e18efcc82d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a353a2ac96899ae5c4a716e18efcc82d6">place_entity</a> (<a class="el" href="structEntity.html">Entity</a> *a, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="separator:a353a2ac96899ae5c4a716e18efcc82d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ab27a92d42b46ea57105757145e223d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ab27a92d42b46ea57105757145e223d">kill_entity</a> (unsigned int x, unsigned int y, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="separator:a0ab27a92d42b46ea57105757145e223d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848d1e1bb1f2b8a229a9c29cc88b5ff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a848d1e1bb1f2b8a229a9c29cc88b5ff8">print_entities</a> (<a class="el" href="structMap.html">Map</a> *m)</td></tr>
+<tr class="separator:a848d1e1bb1f2b8a229a9c29cc88b5ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b94ddd82f4533f47c71751e35bea6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">init_map</a> (int r, int c, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="memdesc:ac2b94ddd82f4533f47c71751e35bea6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates the map area.  <a href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">More...</a><br /></td></tr>
 <tr class="separator:ac2b94ddd82f4533f47c71751e35bea6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,6 +191,27 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section author"><dt>Author</dt><dd>LeonelMatos <a href="https://github.com/LeonelMatos">LeonelMatos's Github</a></dd></dl>
 <p>Ecosystem - </p><dl class="section version"><dt>Version</dt><dd>0.0.1 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="af6a258d8f3ee5206d682d799316314b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a258d8f3ee5206d682d799316314b1">&#9670;&nbsp;</a></span>bool</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">bool</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Boolean type definition. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c"></a>false&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b"></a>true&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -250,16 +282,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initiates an animal. </p>
+<p>Initiates an entity. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>animal pointer </td></tr>
-    <tr><td class="paramname">type</td><td>animal type enum </td></tr>
+    <tr><td class="paramname">type</td><td>entity type enum </td></tr>
     <tr><td class="paramname">x</td><td>position at x </td></tr>
     <tr><td class="paramname">y</td><td>position at y </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>a returns the created entity </dd></dl>
 
 </div>
 </div>
@@ -364,7 +396,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>return -1 if entity not found </dd></dl>
 
 </div>
 </div>
@@ -407,6 +438,24 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a848d1e1bb1f2b8a229a9c29cc88b5ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848d1e1bb1f2b8a229a9c29cc88b5ff8">&#9670;&nbsp;</a></span>print_entities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_entities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMap.html">Map</a> *&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

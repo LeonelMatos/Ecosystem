@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['r_23',['R',['../main_8c.html#a5c71a5e59a53413cd6c270266d63b031',1,'main.c']]],
-  ['rabbit_24',['Rabbit',['../entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7a08f7fa610f13b2b3dcea2bc006479180',1,'entity.h']]],
-  ['read_5fkey_25',['read_key',['../main_8c.html#a0d76938f657e113202fafc1632565bde',1,'main.c']]]
+  ['place_5fentity_23',['place_entity',['../main_8c.html#a353a2ac96899ae5c4a716e18efcc82d6',1,'main.c']]],
+  ['pos_24',['pos',['../structEntity.html#ab3887f0bd9d5d2284e5f19ec6c81fec4',1,'Entity']]],
+  ['position_25',['Position',['../structPosition.html',1,'']]],
+  ['print_5fentities_26',['print_entities',['../main_8c.html#a848d1e1bb1f2b8a229a9c29cc88b5ff8',1,'main.c']]]
 ];

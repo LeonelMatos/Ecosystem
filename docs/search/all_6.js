@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['kill_11',['kill',['../main_8c.html#a9a54f17884b9d094426279cc76bc67a5',1,'main.c']]],
-  ['kill_5fentity_12',['kill_entity',['../main_8c.html#a0ab27a92d42b46ea57105757145e223d',1,'main.c']]]
+  ['init_5fentity_12',['init_entity',['../main_8c.html#a943ba7af71dd932c60a72c44243f6c36',1,'main.c']]],
+  ['init_5fmap_13',['init_map',['../main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f',1,'main.c']]]
 ];
