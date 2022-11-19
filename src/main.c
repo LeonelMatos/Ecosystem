@@ -18,6 +18,12 @@
 #define R 25 ///Rows of the map
 #define C 30 ///Columns of the map
 
+/// Boolean type definition
+typedef enum {
+	false = 0,
+	true
+} bool;
+
 /*DATA*/
 
 /** \bug Deprecated (the first lines of code)
@@ -75,11 +81,11 @@ void warning(const Warning w) {
 
 /*INIT*/
 
-/// @brief Initiates an animal
-/// @param a animal pointer
-/// @param type animal type enum
+/// @brief Initiates an entity
+/// @param type entity type enum
 /// @param x position at x
 /// @param y position at y
+/// @return a returns the created entity
 Entity init_entity (Type type, unsigned int x, unsigned int y) {
 	Entity a;
 	Position pos;
@@ -93,8 +99,8 @@ Entity init_entity (Type type, unsigned int x, unsigned int y) {
 }
 
 void place_entity (Entity *a, Map *m) {
-	if (m->num_entities == R*C/2) warning(ENTITIES_LIMIT);
-	if (a->pos.x > R || a->pos.y > C) warning(OUT_OF_BOUNDS);
+	if (m->num_entities == R*C/2) { warning(ENTITIES_LIMIT); return;}
+	if (a->pos.x > R || a->pos.y > C) { warning(OUT_OF_BOUNDS); return; }
 	
 	m->num_entities++;
 	m->entities[m->num_entities-1] = *a;
@@ -102,20 +108,33 @@ void place_entity (Entity *a, Map *m) {
 }
 
 void kill_entity (unsigned int x, unsigned int y, Map *m) {
-	/// @todo return -1 if entity not found
+	bool entity_found = false;
+
 	for (unsigned int i = 0; i < m->num_entities; i++) {
 		if (m->entities[i].pos.x == x)
 			if (m->entities[i].pos.y == y){
+				entity_found = true;
 				//for loop moving the next entity
 				//to the current index
-				for (unsigned int j = i; j < m->num_entities; j++) {
+				for (unsigned int j = i; j < (m->num_entities-1); j++) {
 					m->entities[j] = m->entities[j+1];
 				}
+				m->map[x][y] = ' ';
+				m->num_entities--;
 
 			}
 	}
+	if (!entity_found) { warning(ENTITY_NOT_FOUND); return; }
 	
 	m->num_entities--;
+}
+
+void print_entities (Map *m) {
+	printf("Entities: [");
+	for (unsigned int i = 0; i < m->num_entities; i++) {
+		printf(" %c", m->entities[i].type);
+	}
+	printf(" ]\n");
 }
 
 /// @brief Initiates the map area
@@ -168,11 +187,27 @@ int main () {
 	Map map;
 	Entity ent1 = init_entity(Rabbit, 1, 1);
 	Entity ent2 = init_entity(Fox, 4, 4);
+	Entity ent3 = init_entity(Grass, 5, 4);
+	Entity ent4 = init_entity(Fox, 10, 5);
+	Entity ent5 = init_entity(Grass, 2, 6);
 	init_map(R, C, &map);
 	place_entity(&ent1, &map);
 	place_entity(&ent2, &map);
+	place_entity(&ent3, &map);
+	place_entity(&ent4, &map);
+	place_entity(&ent5, &map);
 	draw_map(R, C, map.map);
 	printf("\n");
+	
+	print_entities(&map);
+
+	kill_entity(1, 1, &map);
+
+
+	print_entities(&map);
+
+	draw_map(R, C, map.map);
+
 
 	while(activeRun) {
 		

@@ -2,7 +2,7 @@ typedef enum
 {
     Rabbit='R',
     Fox='F',
-    Grass='.',
+    Grass='v',
 
 } Type;
 
