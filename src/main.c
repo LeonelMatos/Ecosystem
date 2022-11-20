@@ -125,8 +125,6 @@ void kill_entity (unsigned int x, unsigned int y, Map *m) {
 			}
 	}
 	if (!entity_found) { warning(ENTITY_NOT_FOUND); return; }
-	
-	m->num_entities--;
 }
 
 void print_entities (Map *m) {
@@ -187,36 +185,14 @@ int main () {
 	Map map;
 	Entity ent1 = init_entity(Rabbit, 1, 1);
 	Entity ent2 = init_entity(Fox, 4, 4);
-	Entity ent3 = init_entity(Grass, 5, 4);
-	Entity ent4 = init_entity(Fox, 10, 5);
-	Entity ent5 = init_entity(Grass, 2, 6);
-	Entity ent6 = init_entity(Fox, 20, 7);
-	Entity ent7 = init_entity(Grass, 10, 2);
-	Entity ent8 = init_entity(Grass, 25, 15);
-	Entity ent9 = init_entity(Fox, 17, 20);
-	Entity ent0 = init_entity(Rabbit, 15, 14);
+	
 	init_map(R, C, &map);
 	place_entity(&ent1, &map);
 	place_entity(&ent2, &map);
-	place_entity(&ent3, &map);
-	place_entity(&ent4, &map);
-	place_entity(&ent5, &map);
-	place_entity(&ent6, &map);
-	place_entity(&ent7, &map);
-	place_entity(&ent8, &map);
-	place_entity(&ent9, &map);
-	place_entity(&ent0, &map);
-	draw_map(R, C, map.map);
-	printf("\n");
-	
-	print_entities(&map);
-
-	kill_entity(1, 1, &map);
-
-
-	print_entities(&map);
 
 	draw_map(R, C, map.map);
+
+	print_entities(&map);
 
 
 	while(activeRun) {
