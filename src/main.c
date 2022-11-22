@@ -63,8 +63,7 @@ int read_key() {
 
 	/// @todo check if I can change this to avoid pressing ENTER every time 
 	while ((nread = read(STDIN_FILENO, &input, 1)) != 1) {
-		if (nread == -1 && errno != EAGAIN)
-			kill("read");
+		if (nread == -1 && errno != EAGAIN) kill("read");
 	}
 
 	while ((c = getchar()) != '\n' && c != '\0' && c != EOF) { }
@@ -172,8 +171,11 @@ void draw_map(int r, int c, char map[r][c]) {
 
 void simulate() {
 	
+	for (int i = 0; i < ticks; i++) {
+		
+		sleep(time_scale);
+	}
 
-	sleep(time_scale);
 }
 
 /*MAIN*/
@@ -192,17 +194,18 @@ int main () {
 
 	draw_map(R, C, map.map);
 
-	print_entities(&map);
 
 
 	while(activeRun) {
 		
 		simulate();
+		print_entities(&map);
 
 		if (read_key() == 'q'){
 			printf("Exiting...");
 			break;
 		}
+		
 
 	}
 

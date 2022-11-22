@@ -16,3 +16,7 @@ typedef struct{
     Type type;
 
 } Entity;
+
+void move_entity () {
+    
+}
