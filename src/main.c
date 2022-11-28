@@ -155,6 +155,8 @@ void move_entity (Map *m, Entity *entity, unsigned int x, unsigned int y) {
 
 	m->map[x][y] = entity->type;
 
+	///@todo Add a method to move the entity to the right/left/up/down by 1.
+
 }
 
 void print_entities (Map *m) {
