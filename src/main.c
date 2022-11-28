@@ -106,7 +106,7 @@ void place_entity (Entity *a, Map *m) {
 	m->map[a->pos.x][a->pos.y] = a->type;
 }
 
-void kill_entity (unsigned int x, unsigned int y, Map *m) {
+void kill_entity (Map *m, unsigned int x, unsigned int y) {
 	bool entity_found = false;
 
 	for (unsigned int i = 0; i < m->num_entities; i++) {
@@ -124,6 +124,26 @@ void kill_entity (unsigned int x, unsigned int y, Map *m) {
 			}
 	}
 	if (!entity_found) { warning(ENTITY_NOT_FOUND); return; }
+}
+
+/// @brief Returns the index of a given entity at the map array
+/// @param m map pointer
+/// @param entity entity 
+/// @return the index 
+int get_index (Map *m, Entity *entity) {
+	for (unsigned int i = 0; i < m->num_entities; i++) {
+		if (m->entities[i].pos.x == entity->pos.x)
+			if (m->entities[i].pos.y == entity->pos.y)
+				return i;
+	}
+	warning(ENTITY_NOT_FOUND); return -1; 
+}
+
+void move_entity (Map *m, Entity *entity, unsigned int x, unsigned int y) {
+	bool entity_found = false;
+
+	
+
 }
 
 void print_entities (Map *m) {
