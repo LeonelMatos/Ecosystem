@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['read_5fkey_58',['read_key',['../main_8c.html#a0d76938f657e113202fafc1632565bde',1,'main.c']]]
+  ['place_5fentity_60',['place_entity',['../main_8c.html#a353a2ac96899ae5c4a716e18efcc82d6',1,'main.c']]],
+  ['print_5fentities_61',['print_entities',['../main_8c.html#a848d1e1bb1f2b8a229a9c29cc88b5ff8',1,'main.c']]]
 ];

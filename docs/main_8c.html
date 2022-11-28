@@ -142,8 +142,14 @@ Functions</h2></td></tr>
 <tr class="separator:a943ba7af71dd932c60a72c44243f6c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a353a2ac96899ae5c4a716e18efcc82d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a353a2ac96899ae5c4a716e18efcc82d6">place_entity</a> (<a class="el" href="structEntity.html">Entity</a> *a, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="separator:a353a2ac96899ae5c4a716e18efcc82d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ab27a92d42b46ea57105757145e223d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ab27a92d42b46ea57105757145e223d">kill_entity</a> (unsigned int x, unsigned int y, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
-<tr class="separator:a0ab27a92d42b46ea57105757145e223d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93de0dad54d30628686cf0e621192f8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a93de0dad54d30628686cf0e621192f8a">kill_entity</a> (<a class="el" href="structMap.html">Map</a> *m, unsigned int x, unsigned int y)</td></tr>
+<tr class="separator:a93de0dad54d30628686cf0e621192f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4cca33c7b77701fc3710630b251c9d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab4cca33c7b77701fc3710630b251c9d6">get_index</a> (<a class="el" href="structMap.html">Map</a> *m, <a class="el" href="structEntity.html">Entity</a> *entity)</td></tr>
+<tr class="memdesc:ab4cca33c7b77701fc3710630b251c9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of a given entity at the map array.  <a href="main_8c.html#ab4cca33c7b77701fc3710630b251c9d6">More...</a><br /></td></tr>
+<tr class="separator:ab4cca33c7b77701fc3710630b251c9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31369a163d997e8790f74e57a5773b99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a31369a163d997e8790f74e57a5773b99">move_entity</a> (<a class="el" href="structMap.html">Map</a> *m, <a class="el" href="structEntity.html">Entity</a> *entity, unsigned int x, unsigned int y)</td></tr>
+<tr class="memdesc:a31369a163d997e8790f74e57a5773b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives an entity in the map and moves it to a given position.  <a href="main_8c.html#a31369a163d997e8790f74e57a5773b99">More...</a><br /></td></tr>
+<tr class="separator:a31369a163d997e8790f74e57a5773b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a848d1e1bb1f2b8a229a9c29cc88b5ff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a848d1e1bb1f2b8a229a9c29cc88b5ff8">print_entities</a> (<a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="separator:a848d1e1bb1f2b8a229a9c29cc88b5ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b94ddd82f4533f47c71751e35bea6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">init_map</a> (int r, int c, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
@@ -247,6 +253,44 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4cca33c7b77701fc3710630b251c9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4cca33c7b77701fc3710630b251c9d6">&#9670;&nbsp;</a></span>get_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMap.html">Map</a> *&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structEntity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the index of a given entity at the map array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>map pointer </td></tr>
+    <tr><td class="paramname">entity</td><td>entity pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>index of the entity. -1 if not found </dd></dl>
 
 </div>
 </div>
@@ -365,8 +409,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ab27a92d42b46ea57105757145e223d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ab27a92d42b46ea57105757145e223d">&#9670;&nbsp;</a></span>kill_entity()</h2>
+<a id="a93de0dad54d30628686cf0e621192f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93de0dad54d30628686cf0e621192f8a">&#9670;&nbsp;</a></span>kill_entity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,6 +418,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void kill_entity </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="structMap.html">Map</a> *&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
@@ -381,13 +431,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structMap.html">Map</a> *&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -413,6 +457,57 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31369a163d997e8790f74e57a5773b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31369a163d997e8790f74e57a5773b99">&#9670;&nbsp;</a></span>move_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMap.html">Map</a> *&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structEntity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Receives an entity in the map and moves it to a given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>map pointer </td></tr>
+    <tr><td class="paramname">entity</td><td>entity pointer </td></tr>
+    <tr><td class="paramname">x</td><td>position x </td></tr>
+    <tr><td class="paramname">y</td><td>position y </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
