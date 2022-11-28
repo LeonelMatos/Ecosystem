@@ -128,8 +128,8 @@ void kill_entity (Map *m, unsigned int x, unsigned int y) {
 
 /// @brief Returns the index of a given entity at the map array
 /// @param m map pointer
-/// @param entity entity 
-/// @return the index 
+/// @param entity entity pointer
+/// @return index of the entity. -1 if not found
 int get_index (Map *m, Entity *entity) {
 	for (unsigned int i = 0; i < m->num_entities; i++) {
 		if (m->entities[i].pos.x == entity->pos.x)
@@ -139,10 +139,21 @@ int get_index (Map *m, Entity *entity) {
 	warning(ENTITY_NOT_FOUND); return -1; 
 }
 
+/// @brief Receives an entity in the map and moves it to a given position
+/// @param m map pointer
+/// @param entity entity pointer
+/// @param x position x
+/// @param y position y
 void move_entity (Map *m, Entity *entity, unsigned int x, unsigned int y) {
-	bool entity_found = false;
+	int index = get_index(m, entity);
+	if (index == -1) { warning(ENTITY_NOT_FOUND); return; }
 
-	
+	m->map[entity->pos.x][entity->pos.y] = ' ';
+
+	m->entities[index].pos.x = x;
+	m->entities[index].pos.y = y;
+
+	m->map[x][y] = entity->type;
 
 }
 
@@ -214,11 +225,16 @@ int main () {
 
 	draw_map(R, C, map.map);
 
+	print_entities(&map);
+
+	move_entity(&map, &ent2, 4, 5);
+
+	draw_map(R, C, map.map);
 
 
 	while(activeRun) {
 		
-		simulate();
+		//simulate();
 		print_entities(&map);
 
 		if (read_key() == 'q'){
