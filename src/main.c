@@ -151,6 +151,7 @@ int get_index (Map *m, Entity *entity) {
 		}
 	}
 	warning(ENTITY_NOT_FOUND); return -1; 
+	/// @todo Still broken. Figure it out idk.
 }
 
 /// @brief Receives an entity in the map and moves it to a given position

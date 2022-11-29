@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wrong_5fdirection_100',['WRONG_DIRECTION',['../warning_8h.html#af6ea07812363481c623a23ea26fbf8edac393c2a3aa19596834d3fc0edd5c110e',1,'warning.h']]]
+  ['purple_115',['PURPLE',['../warning_8h.html#ab87bacfdad76e61b9412d7124be44c1ca2772ad7cd64f03c2aed60f91c69fa69d',1,'warning.h']]]
 ];

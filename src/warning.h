@@ -50,6 +50,8 @@ void print_color (const Color color, const short int bold) {
     for (int i = 0; i < 10; i++) printf("%c", cmd[i]);
     printf("\n");
     printf("%s", cmd);
+
+    /// @todo It was supposed to work, it doesn't. Fix it somehow!
 }
 
 void reset_color () {
