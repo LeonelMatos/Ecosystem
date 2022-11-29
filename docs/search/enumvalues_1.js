@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['false_80',['false',['../main_8c.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c',1,'main.c']]],
-  ['fox_81',['Fox',['../entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7aeef58c878185e32d08dbd883cefc1e35',1,'entity.h']]]
+  ['entities_5flimit_89',['ENTITIES_LIMIT',['../warning_8h.html#af6ea07812363481c623a23ea26fbf8eda8c055a7e4188220c5ea7b25479ad2f64',1,'warning.h']]],
+  ['entity_5fnot_5ffound_90',['ENTITY_NOT_FOUND',['../warning_8h.html#af6ea07812363481c623a23ea26fbf8eda4a80a3aca5c40cea0354ab7b5d369cf5',1,'warning.h']]]
 ];

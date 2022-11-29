@@ -24,6 +24,13 @@ typedef enum {
 	true
 } bool;
 
+typedef enum {
+	UP = 100,
+	DOWN,
+	LEFT,
+	RIGHT
+} Direction;
+
 /*DATA*/
 
 /** \bug Deprecated (the first lines of code)
@@ -155,8 +162,27 @@ void move_entity (Map *m, Entity *entity, unsigned int x, unsigned int y) {
 
 	m->map[x][y] = entity->type;
 
-	///@todo Add a method to move the entity to the right/left/up/down by 1.
+}
 
+void move_direction (Map *m, Entity *entity, Direction dir) {
+	switch (dir) {
+		case UP:
+			move_entity (m, entity, entity->pos.x + 1, entity->pos.y);
+			break;
+		case DOWN:
+			move_entity (m, entity, entity->pos.x - 1, entity->pos.y);
+			break;
+		case LEFT:
+			move_entity(m, entity, entity->pos.x, entity->pos.y - 1);
+			break;
+		case RIGHT:
+			move_entity(m, entity, entity->pos.x, entity->pos.y + 1);
+			break;
+		default:
+			warning(WRONG_DIRECTION);
+	}
+
+	/// @bug ENTITY_NOT_FOUND warning at get_index. Check if it gets the correct position.
 }
 
 void print_entities (Map *m) {
@@ -229,9 +255,11 @@ int main () {
 
 	print_entities(&map);
 
-	move_entity(&map, &ent2, 4, 5);
+	for (int i = 0; i < 5; i++) {
+		move_direction(&map, &ent2, RIGHT);
+		draw_map(R, C, map.map);
+	}
 
-	draw_map(R, C, map.map);
 
 
 	while(activeRun) {

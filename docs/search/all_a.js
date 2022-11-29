@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['out_5fof_5fbounds_24',['OUT_OF_BOUNDS',['../warning_8h.html#af6ea07812363481c623a23ea26fbf8edaa1e81e4fe9fc3d41fffdb945abc5d4d7',1,'warning.h']]]
+  ['num_5fentities_28',['num_entities',['../structMap.html#a04168bdc0775891cfe0a94cce5a1c668',1,'Map']]]
 ];
