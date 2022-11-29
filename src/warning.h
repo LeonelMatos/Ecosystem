@@ -11,7 +11,7 @@ typedef enum
 
 } Warning;
 
-char * warning_to_string (Warning w) {
+char * warning_to_string (const Warning w) {
     switch (w)
     {
     case ENTITIES_LIMIT:
@@ -25,4 +25,33 @@ char * warning_to_string (Warning w) {
     default:
         return "Unexpected error. Please check if spelled correctly";
     }
+}
+
+typedef enum 
+{
+    BLACK,
+    RED,
+    GREEN,
+    YELLOW,
+    BLUE,
+    PURPLE,
+    CYAN,
+    MR_WHITE,
+
+} Color;
+
+void print_color (const Color color, const short int bold) {
+    char cmd[11] = "\033[0;30m";
+    if (bold) {
+        cmd[5] = '1';
+    }
+    cmd[8] = color + 48;
+
+    for (int i = 0; i < 10; i++) printf("%c", cmd[i]);
+    printf("\n");
+    printf("%s", cmd);
+}
+
+void reset_color () {
+    printf("\033[0m");
 }

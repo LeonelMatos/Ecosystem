@@ -79,9 +79,9 @@ int read_key() {
 }
 
 void warning(const Warning w) {
-	printf("\033[0;31m");
-	printf("\n%s\n", warning_to_string(w));
-	printf("\033[0m");
+	print_color(RED, true);
+	printf("\nWarning: %s\n", warning_to_string(w));
+	reset_color();
 	if (read_key() == 'q') kill ("Forced kill program after warning");
 }
 
@@ -138,10 +138,17 @@ void kill_entity (Map *m, unsigned int x, unsigned int y) {
 /// @param entity entity pointer
 /// @return index of the entity. -1 if not found
 int get_index (Map *m, Entity *entity) {
+	printf("num_entities: %d\n", m->num_entities);
 	for (unsigned int i = 0; i < m->num_entities; i++) {
-		if (m->entities[i].pos.x == entity->pos.x)
-			if (m->entities[i].pos.y == entity->pos.y)
+		printf("\nSearching entity %d at (%d, %d)", i, m->entities[i].pos.x, m->entities[i].pos.y);
+		if (m->entities[i].pos.x == entity->pos.x) {
+			printf("<-x");
+			if (m->entities[i].pos.y == entity->pos.y) {
+				printf("+y\n");
 				return i;
+			}
+
+		}
 	}
 	warning(ENTITY_NOT_FOUND); return -1; 
 }
@@ -186,11 +193,13 @@ void move_direction (Map *m, Entity *entity, Direction dir) {
 }
 
 void print_entities (Map *m) {
+	print_color(BLUE, true);
 	printf("Entities: [");
 	for (unsigned int i = 0; i < m->num_entities; i++) {
-		printf(" %c", m->entities[i].type);
+		printf(" %c@(%d, %d);", m->entities[i].type, m->entities[i].pos.x, m->entities[i].pos.y);
 	}
 	printf(" ]\n");
+	reset_color();
 }
 
 /// @brief Initiates the map area
@@ -253,9 +262,9 @@ int main () {
 
 	draw_map(R, C, map.map);
 
-	print_entities(&map);
 
 	for (int i = 0; i < 5; i++) {
+		print_entities(&map);
 		move_direction(&map, &ent2, RIGHT);
 		draw_map(R, C, map.map);
 	}
