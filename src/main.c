@@ -79,8 +79,7 @@ int read_key() {
 }
 
 void warning(const Warning w) {
-	print_color(RED, true);
-	printf("\nWarning: %s\n", warning_to_string(w));
+	printf(B_RED "\nWarning: %s\n", warning_to_string(w));
 	reset_color();
 	if (read_key() == 'q') kill ("Forced kill program after warning");
 }
@@ -194,8 +193,7 @@ void move_direction (Map *m, Entity *entity, Direction dir) {
 }
 
 void print_entities (Map *m) {
-	print_color(BLUE, true);
-	printf("Entities: [");
+	printf(BLU "Entities: [");
 	for (unsigned int i = 0; i < m->num_entities; i++) {
 		printf(" %c@(%d, %d);", m->entities[i].type, m->entities[i].pos.x, m->entities[i].pos.y);
 	}
