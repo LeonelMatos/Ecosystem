@@ -140,8 +140,10 @@ int get_index (Map *m, Entity *entity) {
 	printf("num_entities: %d\n", m->num_entities);
 	for (unsigned int i = 0; i < m->num_entities; i++) {
 		printf("\nSearching entity %d at (%d, %d)", i, m->entities[i].pos.x, m->entities[i].pos.y);
+		printf(" [x: %d vs. %d] ", m->entities[i].pos.x, entity->pos.x);
 		if (m->entities[i].pos.x == entity->pos.x) {
 			printf("<-x");
+			printf(" %d vs. %d", m->entities[i].pos.y, entity[i].pos.y);
 			if (m->entities[i].pos.y == entity->pos.y) {
 				printf("+y\n");
 				return i;
