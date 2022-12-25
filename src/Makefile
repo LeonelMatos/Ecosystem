@@ -15,6 +15,18 @@ ecosystem : $(OBJECTS)
 run : ecosystem
 	@./$<
 
+build : ecosystem
+	@echo "Building ecosystem...  0%"
+	@sleep 1
+	@echo "Building ecosystem... 10%"
+	@echo "Building ecosystem... 50%"
+	@sleep 1
+	@echo "Building ecosystem... 70%"
+	@echo "Building ecosystem... 99%"
+	@sleep 4
+	@echo "Building ecosystem...100%"
+	@sudo mv ecosystem /usr/bin
+
 rm :
 	@rm ecosystem
 	@rm *.o
