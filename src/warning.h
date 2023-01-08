@@ -29,6 +29,7 @@ typedef enum
     OUT_OF_BOUNDS,
     ENTITY_NOT_FOUND,
     WRONG_DIRECTION,
+    INVALID_ARGUMENT,
 
 } Warning;
 
@@ -43,6 +44,8 @@ char * warning_to_string (const Warning w) {
         return "Entity not found with given parameters";
     case WRONG_DIRECTION:
         return "Invalid direction. Please check input";
+    case INVALID_ARGUMENT:
+        return "Given an invalid argument. Please check input";
     default:
         return "Unexpected error. Please check if spelled correctly";
     }

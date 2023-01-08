@@ -12,11 +12,14 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
+#include <time.h>
 #include "entity.h"
 #include "warning.h"
 
 #define R 25 ///Rows of the map
 #define C 30 ///Columns of the map
+
+#define TREE_FREQ 12 ///Spawn tree frequency
 
 /// Boolean type definition
 typedef enum {
@@ -113,12 +116,12 @@ void place_entity (Entity *a, Map *m) {
 }
 
 void kill_entity (Map *m, unsigned int x, unsigned int y) {
-	bool entity_found = false;
+	int entity_found = 0;
 
 	for (unsigned int i = 0; i < m->num_entities; i++) {
 		if (m->entities[i].pos.x == x)
 			if (m->entities[i].pos.y == y){
-				entity_found = true;
+				entity_found = 1;
 				//for loop moving the next entity
 				//to the current index
 				for (unsigned int j = i; j < (m->num_entities-1); j++) {
@@ -216,8 +219,24 @@ void init_map (int r, int c, Map *m) {
 
 /*ECOSYSTEM*/
 
-void draw_map(int r, int c, char map[r][c]) {
+void generate_trees (Map *map, const int freq) {
+	srand(time(0));
+	Entity entity;
+	int r = rand() % freq;
+	for (unsigned int x = 0; x < R; x++)
+		for (unsigned int y = 0; y < C; y++) {
+			if (map->map[x][y] == ' ') {
+				r = rand() % freq;
+				if (r == 1) {
+					entity = init_entity(Tree, x, y);
+					place_entity(&entity, map);
+				};
+			}
+		}
+}
 
+void draw_map(int r, int c, char map[r][c], int repr) {
+	
 	printf(".");
 	for (int i = 0; i < c; i++) {
 		printf("_.");
@@ -227,9 +246,17 @@ void draw_map(int r, int c, char map[r][c]) {
 	for (int i = 0; i < r; i++) {
 		printf("|");
 		for (int j = 0; j < c; j++) {
-			printf("%c.", map[i][j]);
+			if (repr == 1) {
+				printf("%s", entity_image(map[i][j]));
+			} 
+			else {
+			printf("%s", entity_color(map[i][j]));
+			printf("%c", map[i][j]);
+			reset_color();
+			}
+		printf(" ");
 		}
-		printf("|\n");
+		printf("\t|\n");
 	}
 	printf(".");
 	for (int i = 0; i < c; i++) {
@@ -249,9 +276,23 @@ void simulate() {
 
 /*MAIN*/
 
-int main () {
+int main (int argc, char *argv[]) {
 
 	int activeRun = 1;
+	int repr = 0;
+
+	if (argc > 1){
+		switch (argv[1][0]) {
+			case '0':
+				repr = 0;
+				break;
+			case '1':
+				repr = 1;
+				break;
+			default:
+				warning(INVALID_ARGUMENT);
+		}
+	}
 
 	Map map;
 	Entity ent1 = init_entity(Rabbit, 1, 1);
@@ -261,9 +302,11 @@ int main () {
 	place_entity(&ent1, &map);
 	place_entity(&ent2, &map);
 
-	draw_map(R, C, map.map);
+	generate_trees(&map, TREE_FREQ);
 
+	draw_map(R, C, map.map, repr);
 
+/*
 	for (int i = 0; i < 5; i++) {
 		print_entities(&map);
 		move_direction(&map, &ent2, RIGHT);
@@ -271,7 +314,7 @@ int main () {
 	}
 
 
-
+*/
 	while(activeRun) {
 		
 		//simulate();

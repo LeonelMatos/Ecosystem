@@ -15,6 +15,9 @@ ecosystem : $(OBJECTS)
 run : ecosystem
 	@./$<
 
+run1 : ecosystem
+	@./$< 1
+
 build : ecosystem
 	@echo "Building ecosystem...  0%"
 	@sleep 1
