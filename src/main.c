@@ -1,9 +1,10 @@
 /**
-* @author LeonelMatos [LeonelMatos's Github](https://github.com/LeonelMatos)
-* 
-* Ecosystem - @version 0.0.3
-*
-*/
+ * @file main.c
+ * @author LeonelMatos [LeonelMatos's Github](https://github.com/LeonelMatos)
+ * @version 0.0.3
+ * @date 2023-01-10
+ * @copyright Copyright (c) 2023
+ */
 
 /*INCLUDE/DEFINE*/
 
