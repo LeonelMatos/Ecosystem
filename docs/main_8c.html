@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); })
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="entity_8h_source.html">entity.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="warning_8h_source.html">warning.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -118,6 +119,8 @@ Macros</h2></td></tr>
 <tr class="separator:a5c71a5e59a53413cd6c270266d63b031"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4cf4b2ab929bd23951a8676eeac086b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac4cf4b2ab929bd23951a8676eeac086b">C</a>&#160;&#160;&#160;30</td></tr>
 <tr class="separator:ac4cf4b2ab929bd23951a8676eeac086b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ebfde29641ef7be2d08571e18ed914"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a40ebfde29641ef7be2d08571e18ed914">TREE_FREQ</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:a40ebfde29641ef7be2d08571e18ed914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -163,12 +166,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ac2b94ddd82f4533f47c71751e35bea6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">init_map</a> (int r, int c, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="memdesc:ac2b94ddd82f4533f47c71751e35bea6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates the map area.  <a href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">More...</a><br /></td></tr>
 <tr class="separator:ac2b94ddd82f4533f47c71751e35bea6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e5e36d9b27cd86b75b03e26a83713b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5e5e36d9b27cd86b75b03e26a83713b8">draw_map</a> (int r, int c, char map[r][c])</td></tr>
-<tr class="separator:a5e5e36d9b27cd86b75b03e26a83713b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9abaec4b140d8eb6025e9a5e51e5d835"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9abaec4b140d8eb6025e9a5e51e5d835">generate_trees</a> (<a class="el" href="structMap.html">Map</a> *map, const int freq)</td></tr>
+<tr class="separator:a9abaec4b140d8eb6025e9a5e51e5d835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb4f4e40c105bf4dfdd586c4ecefad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aeeb4f4e40c105bf4dfdd586c4ecefad7">draw_map</a> (int r, int c, char map[r][c], int repr)</td></tr>
+<tr class="separator:aeeb4f4e40c105bf4dfdd586c4ecefad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f451daf160cbacfab1e7b495789750e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1f451daf160cbacfab1e7b495789750e">simulate</a> ()</td></tr>
 <tr class="separator:a1f451daf160cbacfab1e7b495789750e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -205,6 +210,20 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section author"><dt>Author</dt><dd>LeonelMatos <a href="https://github.com/LeonelMatos">LeonelMatos's Github</a></dd></dl>
 <p>Ecosystem - </p><dl class="section version"><dt>Version</dt><dd>0.0.1 </dd></dl>
+
+</div>
+</div>
+<a id="a40ebfde29641ef7be2d08571e18ed914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ebfde29641ef7be2d08571e18ed914">&#9670;&nbsp;</a></span>TREE_FREQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TREE_FREQ&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -250,8 +269,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5e5e36d9b27cd86b75b03e26a83713b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e5e36d9b27cd86b75b03e26a83713b8">&#9670;&nbsp;</a></span>draw_map()</h2>
+<a id="aeeb4f4e40c105bf4dfdd586c4ecefad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeb4f4e40c105bf4dfdd586c4ecefad7">&#9670;&nbsp;</a></span>draw_map()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +291,41 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>map</em>[r][c]&#160;</td>
+          <td class="paramname"><em>map</em>[r][c], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>repr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9abaec4b140d8eb6025e9a5e51e5d835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9abaec4b140d8eb6025e9a5e51e5d835">&#9670;&nbsp;</a></span>generate_trees()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generate_trees </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMap.html">Map</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>freq</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -472,8 +525,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -481,8 +534,19 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

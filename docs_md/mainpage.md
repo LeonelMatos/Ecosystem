@@ -4,7 +4,7 @@
 
 # Ecosystem: The Documentation
 
-## Ecosys
+## Introduction
 
  \b Ecosystem is a simple grid-like map populated by various entities. An entity can have its own type, move around and 
 have its set of behaviours and values. With an aim of creating an environment where these entities can interact with
@@ -18,6 +18,8 @@ each others.
 
  What motivates me to work on this project is how I've started: with nothing but my laptop waiting for input and a coffee-filled 
 brain.
+
+![Screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yfeqc3ggkr2q0mjjtgkc.png)
 
 # Links
 
@@ -34,6 +36,7 @@ brain.
 
 \b Mainpage
 
-\version 1
+\version 2
+\date 09-01-2023
 
-\date 19-11-2022
+~~19-11-2022~~

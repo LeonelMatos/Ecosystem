@@ -41,4 +41,6 @@ help :
 	@echo "\n\033[1m"Commands:"\033[0m\n"
 	@echo  "\t 	: Compiles the project"
 	@echo  "\trun	: Compiles and runs the project"
-	@echo  "\trm	: Removes the build and object files\n\n"
+	@echo  "\trm	: Removes the build and object files"
+	@echo  "\tbuild	: Builds the program on \usr\bin\ after compiling"
+	@echo  "\thelp	: I'll leave you at that one.\n\n"

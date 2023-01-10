@@ -26,12 +26,23 @@ var NAVTREE =
 [
   [ "Ecosystem", "index.html", [
     [ "Ecosystem: The Documentation", "index.html#autotoc_md0", [
-      [ "Ecosys", "index.html#autotoc_md1", null ],
+      [ "Introduction", "index.html#autotoc_md1", null ],
       [ "Motivation", "index.html#autotoc_md2", null ]
     ] ],
     [ "Links", "index.html#autotoc_md3", null ],
     [ "Author", "index.html#autotoc_md4", [
       [ "Info", "index.html#autotoc_md5", null ]
+    ] ],
+    [ "Makefile", "makefile.html", [
+      [ "Introduction", "makefile.html#autotoc_md7", null ],
+      [ "How to Run", "makefile.html#autotoc_md8", null ],
+      [ "List of commands", "makefile.html#autotoc_md9", [
+        [ "Makefile Guide", "makefile.html#autotoc_md6", null ],
+        [ "Example", "makefile.html#autotoc_md10", null ]
+      ] ],
+      [ "Make Help", "makefile.html#autotoc_md11", null ],
+      [ "Variables", "makefile.html#autotoc_md12", null ],
+      [ "TODO", "makefile.html#autotoc_md13", null ]
     ] ],
     [ "Bug List", "bug.html", null ],
     [ "Todo List", "todo.html", null ],
