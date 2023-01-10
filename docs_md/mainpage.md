@@ -4,6 +4,8 @@
 
 # Ecosystem: The Documentation
 
+\version 0.0.3
+
 ## Introduction
 
  \b Ecosystem is a simple grid-like map populated by various entities. An entity can have its own type, move around and 
