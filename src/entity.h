@@ -42,6 +42,7 @@ typedef enum
     Rabbit = 'R',
     Fox = 'F',
     Tree = 'T',
+    Grass = 'G',
 
 } Type;
 

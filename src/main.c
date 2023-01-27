@@ -257,7 +257,9 @@ void draw_map(int r, int c, char map[r][c], int repr) {
 			}
 		printf(" ");
 		}
-		printf("\t|\n");
+		if (repr == 0)
+			printf("|");
+		printf("\n");
 	}
 	printf(".");
 	for (int i = 0; i < c; i++) {
