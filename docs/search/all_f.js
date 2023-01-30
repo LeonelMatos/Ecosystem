@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['ticks_60',['ticks',['../main_8c.html#a7fb737f221054b95454d8c4b04a23372',1,'main.c']]],
-  ['time_5fscale_61',['time_scale',['../main_8c.html#a368510152543695bee4b6f14f53f8acf',1,'main.c']]],
-  ['todo_20list_62',['Todo List',['../todo.html',1,'']]],
-  ['tree_63',['Tree',['../entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7a27035e983be947a63eb9e36b19258e36',1,'entity.h']]],
-  ['tree_5ffreq_64',['TREE_FREQ',['../main_8c.html#a40ebfde29641ef7be2d08571e18ed914',1,'main.c']]],
-  ['true_65',['true',['../main_8c.html#af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b',1,'main.c']]],
-  ['type_66',['type',['../structEntity.html#a9037dc23f14d427789111f9eb7d0b3df',1,'Entity']]],
-  ['type_67',['Type',['../entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7',1,'entity.h']]]
+  ['r_60',['R',['../main_8c.html#a5c71a5e59a53413cd6c270266d63b031',1,'main.c']]],
+  ['rabbit_61',['Rabbit',['../entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7a08f7fa610f13b2b3dcea2bc006479180',1,'entity.h']]],
+  ['rabbit_2eh_62',['rabbit.h',['../rabbit_8h.html',1,'']]],
+  ['read_5fkey_63',['read_key',['../main_8c.html#a0d76938f657e113202fafc1632565bde',1,'main.c']]],
+  ['red_64',['RED',['../entity_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'RED():&#160;entity.h'],['../warning_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'RED():&#160;warning.h']]],
+  ['reset_5fcolor_65',['reset_color',['../warning_8h.html#a4bc9f1f5ef0fc8b14c38fc821071c037',1,'warning.h']]],
+  ['right_66',['RIGHT',['../main_8c.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38',1,'main.c']]],
+  ['rst_67',['RST',['../entity_8h.html#ac5d957e4fd3dc11cd97a54cf9ca057a4',1,'RST():&#160;entity.h'],['../warning_8h.html#ac5d957e4fd3dc11cd97a54cf9ca057a4',1,'RST():&#160;warning.h']]]
 ];

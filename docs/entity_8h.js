@@ -20,7 +20,8 @@ var entity_8h =
     [ "Type", "entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7", [
       [ "Rabbit", "entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7a08f7fa610f13b2b3dcea2bc006479180", null ],
       [ "Fox", "entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7aeef58c878185e32d08dbd883cefc1e35", null ],
-      [ "Tree", "entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7a27035e983be947a63eb9e36b19258e36", null ]
+      [ "Tree", "entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7a27035e983be947a63eb9e36b19258e36", null ],
+      [ "Grass", "entity_8h.html#a1d1cfd8ffb84e947f82999c682b666a7a283b79b5e51a79e202e0702f189485ad", null ]
     ] ],
     [ "entity_color", "entity_8h.html#a6c7729e9eb0a6ec46cc0405bb377fb3b", null ],
     [ "entity_image", "entity_8h.html#a5b5eac59c3e884d416c908084693a600", null ]

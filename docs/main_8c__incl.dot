@@ -22,4 +22,6 @@ digraph "src/main.c"
   Node9 [label="warning.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$warning_8h.html",tooltip=" "];
   Node9 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="entities/rabbit.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rabbit_8h.html",tooltip=" "];
 }

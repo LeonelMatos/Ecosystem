@@ -70,6 +70,8 @@ char* entity_color (Type type) {
             return B_YEL;
         case Tree:
             return B_GRN;
+        case Grass:
+            return GRN;
         default:
             return B_MR_WHITE;
     }
@@ -86,6 +88,8 @@ char* entity_image (Type type) {
             return "🦊";
         case Tree:
             return "🌲";
+        case Grass:
+            return "🌱";
         default:
             return " ";
             

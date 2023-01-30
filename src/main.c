@@ -1,10 +1,11 @@
 /**
  * @file main.c
  * @author LeonelMatos [LeonelMatos's Github](https://github.com/LeonelMatos)
- * @version 0.0.3
- * @date 2023-01-10
+ * @version 0.0.4
+ * @date 2023-01-30
  * @copyright Copyright (c) 2023
  */
+
 
 /*INCLUDE/DEFINE*/
 
@@ -20,7 +21,7 @@
 #define R 25 ///Rows of the map
 #define C 30 ///Columns of the map
 
-#define TREE_FREQ 12 ///Spawn tree frequency
+#define TREE_FREQ 10 ///Spawn tree frequency (DEFAULT:20)
 
 /// Boolean type definition
 typedef enum {
@@ -34,6 +35,11 @@ typedef enum {
 	LEFT,
 	RIGHT
 } Direction;
+
+
+/*ENTITIES*/
+#include "entities/rabbit.h"
+
 
 /*DATA*/
 
@@ -55,6 +61,7 @@ typedef struct {
 
 unsigned short int time_scale = 1;
 unsigned short int ticks = 10;
+
 
 /*AUX FUNCTIONS*/
 
@@ -88,7 +95,8 @@ void warning(const Warning w) {
 	if (read_key() == 'q') kill ("Forced kill program after warning");
 }
 
-/*INIT*/
+
+/*ENTITY*/
 
 /// @brief Initiates an entity
 /// @param type entity type enum
@@ -116,7 +124,7 @@ void place_entity (Entity *a, Map *m) {
 	m->map[a->pos.x][a->pos.y] = a->type;
 }
 
-void kill_entity (Map *m, unsigned int x, unsigned int y) {
+void kill_entity (unsigned int x, unsigned int y, Map *m) {
 	int entity_found = 0;
 
 	for (unsigned int i = 0; i < m->num_entities; i++) {
@@ -140,7 +148,7 @@ void kill_entity (Map *m, unsigned int x, unsigned int y) {
 /// @param m map pointer
 /// @param entity entity pointer
 /// @return index of the entity. -1 if not found
-int get_index (Map *m, Entity *entity) {
+int get_index (Entity *entity, Map *m) {
 	printf("num_entities: %d\n", m->num_entities);
 	for (unsigned int i = 0; i < m->num_entities; i++) {
 		printf("\nSearching entity %d at (%d, %d)", i, m->entities[i].pos.x, m->entities[i].pos.y);
@@ -164,8 +172,8 @@ int get_index (Map *m, Entity *entity) {
 /// @param entity entity pointer
 /// @param x position x
 /// @param y position y
-void move_entity (Map *m, Entity *entity, unsigned int x, unsigned int y) {
-	int index = get_index(m, entity);
+void move_entity (Entity *entity, unsigned int x, unsigned int y, Map *m) {
+	int index = get_index(entity, m);
 	if (index == -1) { warning(ENTITY_NOT_FOUND); return; }
 
 	m->map[entity->pos.x][entity->pos.y] = ' ';
@@ -177,19 +185,19 @@ void move_entity (Map *m, Entity *entity, unsigned int x, unsigned int y) {
 
 }
 
-void move_direction (Map *m, Entity *entity, Direction dir) {
+void move_direction (Entity *entity, Direction dir, Map *m) {
 	switch (dir) {
 		case UP:
-			move_entity (m, entity, entity->pos.x + 1, entity->pos.y);
+			move_entity (entity, entity->pos.x + 1, entity->pos.y, m);
 			break;
 		case DOWN:
-			move_entity (m, entity, entity->pos.x - 1, entity->pos.y);
+			move_entity (entity, entity->pos.x - 1, entity->pos.y, m);
 			break;
 		case LEFT:
-			move_entity(m, entity, entity->pos.x, entity->pos.y - 1);
+			move_entity(entity, entity->pos.x, entity->pos.y - 1, m);
 			break;
 		case RIGHT:
-			move_entity(m, entity, entity->pos.x, entity->pos.y + 1);
+			move_entity(entity, entity->pos.x, entity->pos.y + 1, m);
 			break;
 		default:
 			warning(WRONG_DIRECTION);
@@ -207,6 +215,52 @@ void print_entities (Map *m) {
 	reset_color();
 }
 
+
+/*ENTITY_BEHAVIOUR*/
+
+char near[9] = {' '};
+
+///\bug Currently not working as intended. Surrounding entities may or not appear.
+void check_near (Entity *entity, Map *map) {
+
+	///\todo check: size 9 because of /0
+	///All positions near the entity
+
+    ///\todo check if an entity is sitting at a border of the map
+	if (entity->pos.x != 0) {
+		if (entity->pos.y != 0)
+    		near[0] = map->map[entity->pos.x-1][entity->pos.y-1];   //<^
+    	near[1] = map->map[entity->pos.x-1][entity->pos.y];     //^
+		if (entity->pos.y != C)
+    		near[2] = map->map[entity->pos.x-1][entity->pos.y+1];   //^>
+	}
+	if (entity->pos.y != 0)
+    	near[3] = map->map[entity->pos.x][entity->pos.y-1];     //<
+	if (entity->pos.y != C)
+    	near[4] = map->map[entity->pos.x][entity->pos.y+1];     //>
+
+	if (entity->pos.x != R) {
+		if (entity->pos.y != 0)
+			near[5] = map->map[entity->pos.x+1][entity->pos.y-1];   //<v
+		near[6] = map->map[entity->pos.x+1][entity->pos.y];     //v
+		if (entity->pos.y != C)
+			near[7] = map->map[entity->pos.x+1][entity->pos.y+1];   //v>
+	}
+}
+
+void print_near_entities(Entity *entity, Map *map) {
+	check_near(entity, map);
+	for (int i = 0; i < 3; i++) 
+		printf("[%c]", near[i]);
+	printf("\n[%c][%c][%c]\n", near[4], entity->type, near[5]);
+	for (int i = 5; i < 8; i++)
+		printf("[%c]", near[i]);
+	printf("\n");
+
+}
+
+
+/*INIT*/
 /// @brief Initiates the map area
 /// @param m map area pointer
 /// @param r rows
@@ -218,9 +272,10 @@ void init_map (int r, int c, Map *m) {
 			m->map[i][j] = ' ';
 }
 
+
 /*ECOSYSTEM*/
 
-void generate_trees (Map *map, const int freq) {
+void generate_trees (const int freq, Map *map) {
 	srand(time(0));
 	Entity entity;
 	int r = rand() % freq;
@@ -231,7 +286,11 @@ void generate_trees (Map *map, const int freq) {
 				if (r == 1) {
 					entity = init_entity(Tree, x, y);
 					place_entity(&entity, map);
-				};
+				}
+				else if (r == 2) {
+					entity = init_entity(Grass, x, y);
+					place_entity(&entity, map);
+				}
 			}
 		}
 }
@@ -268,14 +327,6 @@ void draw_map(int r, int c, char map[r][c], int repr) {
 	printf("\n");
 }
 
-void simulate() {
-	
-	for (int i = 0; i < ticks; i++) {
-		
-		sleep(time_scale);
-	}
-
-}
 
 /*MAIN*/
 
@@ -305,9 +356,14 @@ int main (int argc, char *argv[]) {
 	place_entity(&ent1, &map);
 	place_entity(&ent2, &map);
 
-	generate_trees(&map, TREE_FREQ);
+	generate_trees(TREE_FREQ, &map);
 
 	draw_map(R, C, map.map, repr);
+
+	///\bug Last implementation broke the output of draw_map
+	print_near_entities(&ent2, &map);
+
+	print_entities(&map);
 
 /*
 	for (int i = 0; i < 5; i++) {
@@ -320,9 +376,6 @@ int main (int argc, char *argv[]) {
 */
 	while(activeRun) {
 		
-		//simulate();
-		print_entities(&map);
-
 		if (read_key() == 'q'){
 			printf("Exiting...");
 			break;

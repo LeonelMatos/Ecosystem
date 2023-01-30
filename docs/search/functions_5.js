@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_94',['main',['../main_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.c']]],
-  ['move_5fdirection_95',['move_direction',['../main_8c.html#ab03cc7bac4623c6fefa5fe95c0fd5daf',1,'main.c']]],
-  ['move_5fentity_96',['move_entity',['../main_8c.html#a31369a163d997e8790f74e57a5773b99',1,'main.c']]]
+  ['kill_102',['kill',['../main_8c.html#a9a54f17884b9d094426279cc76bc67a5',1,'main.c']]],
+  ['kill_5fentity_103',['kill_entity',['../main_8c.html#a0ab27a92d42b46ea57105757145e223d',1,'main.c']]]
 ];

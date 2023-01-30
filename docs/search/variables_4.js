@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ticks_109',['ticks',['../main_8c.html#a7fb737f221054b95454d8c4b04a23372',1,'main.c']]],
-  ['time_5fscale_110',['time_scale',['../main_8c.html#a368510152543695bee4b6f14f53f8acf',1,'main.c']]],
-  ['type_111',['type',['../structEntity.html#a9037dc23f14d427789111f9eb7d0b3df',1,'Entity']]]
+  ['near_121',['near',['../main_8c.html#a13d276b2c881ade5640bbeb6993b34d1',1,'main.c']]],
+  ['num_5fentities_122',['num_entities',['../structMap.html#a04168bdc0775891cfe0a94cce5a1c668',1,'Map']]]
 ];

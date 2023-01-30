@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['generate_5ftrees_88',['generate_trees',['../main_8c.html#a9abaec4b140d8eb6025e9a5e51e5d835',1,'main.c']]],
-  ['get_5findex_89',['get_index',['../main_8c.html#ab4cca33c7b77701fc3710630b251c9d6',1,'main.c']]]
+  ['entity_5fcolor_96',['entity_color',['../entity_8h.html#a6c7729e9eb0a6ec46cc0405bb377fb3b',1,'entity.h']]],
+  ['entity_5fimage_97',['entity_image',['../entity_8h.html#a5b5eac59c3e884d416c908084693a600',1,'entity.h']]]
 ];

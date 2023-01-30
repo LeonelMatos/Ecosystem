@@ -44,8 +44,8 @@ var NAVTREE =
       [ "Variables", "makefile.html#autotoc_md12", null ],
       [ "TODO", "makefile.html#autotoc_md13", null ]
     ] ],
-    [ "Bug List", "bug.html", null ],
     [ "Todo List", "todo.html", null ],
+    [ "Bug List", "bug.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

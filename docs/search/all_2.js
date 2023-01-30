@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['direction_12',['Direction',['../main_8c.html#a224b9163917ac32fc95a60d8c1eec3aa',1,'main.c']]],
-  ['down_13',['DOWN',['../main_8c.html#a224b9163917ac32fc95a60d8c1eec3aaa9b0b4a95b99523966e0e34ffdadac9da',1,'main.c']]],
-  ['draw_5fmap_14',['draw_map',['../main_8c.html#aeeb4f4e40c105bf4dfdd586c4ecefad7',1,'main.c']]]
+  ['c_11',['C',['../main_8c.html#ac4cf4b2ab929bd23951a8676eeac086b',1,'main.c']]],
+  ['check_5fnear_12',['check_near',['../main_8c.html#a21807d2cb001dc95c0c2fc8c7e0b9bad',1,'main.c']]],
+  ['cyn_13',['CYN',['../entity_8h.html#adc708fa688f5d78db361f66c36f0f807',1,'CYN():&#160;entity.h'],['../warning_8h.html#adc708fa688f5d78db361f66c36f0f807',1,'CYN():&#160;warning.h']]]
 ];
