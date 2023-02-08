@@ -10,6 +10,11 @@ each others.
 
 [Ecosystem's Documentation](https://leonelmatos.github.io/Ecosystem)
 
+# Compile
+
+*Makefile* at /src/
+There's a makefile guide in the docs.
+
 # Author ✒️
 
 - [LeonelMatos](https://www.github.com/LeonelMatos)
