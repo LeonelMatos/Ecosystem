@@ -220,10 +220,7 @@ void print_entities (Map *m) {
 
 char near[9] = {' '};
 
-///\bug Currently not working as intended. Surrounding entities may or not appear.
 void check_near (Entity *entity, Map *map) {
-
-	///\todo check: size 9 because of /0
 	///All positions near the entity
 
     ///\todo check if an entity is sitting at a border of the map
@@ -250,12 +247,14 @@ void check_near (Entity *entity, Map *map) {
 
 void print_near_entities(Entity *entity, Map *map) {
 	check_near(entity, map);
+	printf(B_GRN "Entities near %c[%d, %d]\n", entity->type, entity->pos.x, entity->pos.y);
+	reset_color();
 	for (int i = 0; i < 3; i++) 
 		printf("[%c]", near[i]);
-	printf("\n[%c][%c][%c]\n", near[4], entity->type, near[5]);
+	printf("\n[%c][%c][%c]\n", near[3], entity->type, near[4]);
 	for (int i = 5; i < 8; i++)
 		printf("[%c]", near[i]);
-	printf("\n");
+	printf("\n\n");
 
 }
 
@@ -324,7 +323,7 @@ void draw_map(int r, int c, char map[r][c], int repr) {
 	for (int i = 0; i < c; i++) {
 		printf("_.");
 	}
-	printf("\n");
+	printf("\n\n");
 }
 
 
@@ -363,7 +362,7 @@ int main (int argc, char *argv[]) {
 	///\bug Last implementation broke the output of draw_map
 	print_near_entities(&ent2, &map);
 
-	print_entities(&map);
+	//print_entities(&map);
 
 /*
 	for (int i = 0; i < 5; i++) {
