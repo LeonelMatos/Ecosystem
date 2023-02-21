@@ -20,6 +20,7 @@ var main_8c =
     [ "get_index", "main_8c.html#a8c52683734a41a3cc64bb5269bddda22", null ],
     [ "init_entity", "main_8c.html#a943ba7af71dd932c60a72c44243f6c36", null ],
     [ "init_map", "main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f", null ],
+    [ "init_near", "main_8c.html#a2da344450a8a14563589ec56daf88457", null ],
     [ "kill", "main_8c.html#a9a54f17884b9d094426279cc76bc67a5", null ],
     [ "kill_entity", "main_8c.html#a0ab27a92d42b46ea57105757145e223d", null ],
     [ "main", "main_8c.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
@@ -30,7 +31,7 @@ var main_8c =
     [ "print_near_entities", "main_8c.html#ad46ef29374a013800b9dd162a76069bc", null ],
     [ "read_key", "main_8c.html#a0d76938f657e113202fafc1632565bde", null ],
     [ "warning", "main_8c.html#a5dff413cf229bbed61308fd52e9b03e6", null ],
-    [ "near", "main_8c.html#a13d276b2c881ade5640bbeb6993b34d1", null ],
+    [ "near", "main_8c.html#ac6ed8f51f0973e349dcbc3f51ccfb143", null ],
     [ "ticks", "main_8c.html#a7fb737f221054b95454d8c4b04a23372", null ],
     [ "time_scale", "main_8c.html#a368510152543695bee4b6f14f53f8acf", null ]
 ];

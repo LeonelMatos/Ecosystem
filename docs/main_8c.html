@@ -164,9 +164,14 @@ Functions</h2></td></tr>
 <tr class="separator:a50e16d307428ef46f351e7346d0cc18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a848d1e1bb1f2b8a229a9c29cc88b5ff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a848d1e1bb1f2b8a229a9c29cc88b5ff8">print_entities</a> (<a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="separator:a848d1e1bb1f2b8a229a9c29cc88b5ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da344450a8a14563589ec56daf88457"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2da344450a8a14563589ec56daf88457">init_near</a> (char array[])</td></tr>
+<tr class="memdesc:a2da344450a8a14563589ec56daf88457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates the near array.  <a href="main_8c.html#a2da344450a8a14563589ec56daf88457">More...</a><br /></td></tr>
+<tr class="separator:a2da344450a8a14563589ec56daf88457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21807d2cb001dc95c0c2fc8c7e0b9bad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a21807d2cb001dc95c0c2fc8c7e0b9bad">check_near</a> (<a class="el" href="structEntity.html">Entity</a> *entity, <a class="el" href="structMap.html">Map</a> *map)</td></tr>
+<tr class="memdesc:a21807d2cb001dc95c0c2fc8c7e0b9bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves to the near array all entities near the given one.  <a href="main_8c.html#a21807d2cb001dc95c0c2fc8c7e0b9bad">More...</a><br /></td></tr>
 <tr class="separator:a21807d2cb001dc95c0c2fc8c7e0b9bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad46ef29374a013800b9dd162a76069bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad46ef29374a013800b9dd162a76069bc">print_near_entities</a> (<a class="el" href="structEntity.html">Entity</a> *entity, <a class="el" href="structMap.html">Map</a> *map)</td></tr>
+<tr class="memdesc:ad46ef29374a013800b9dd162a76069bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints a small map of nearby entities  <a href="main_8c.html#ad46ef29374a013800b9dd162a76069bc">More...</a><br /></td></tr>
 <tr class="separator:ad46ef29374a013800b9dd162a76069bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b94ddd82f4533f47c71751e35bea6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">init_map</a> (int r, int c, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="memdesc:ac2b94ddd82f4533f47c71751e35bea6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates the map area.  <a href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">More...</a><br /></td></tr>
@@ -184,8 +189,9 @@ Variables</h2></td></tr>
 <tr class="separator:a368510152543695bee4b6f14f53f8acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fb737f221054b95454d8c4b04a23372"><td class="memItemLeft" align="right" valign="top">unsigned short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7fb737f221054b95454d8c4b04a23372">ticks</a> = 10</td></tr>
 <tr class="separator:a7fb737f221054b95454d8c4b04a23372"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13d276b2c881ade5640bbeb6993b34d1"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a13d276b2c881ade5640bbeb6993b34d1">near</a> [9] = {' '}</td></tr>
-<tr class="separator:a13d276b2c881ade5640bbeb6993b34d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ed8f51f0973e349dcbc3f51ccfb143"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac6ed8f51f0973e349dcbc3f51ccfb143">near</a> [8]</td></tr>
+<tr class="memdesc:ac6ed8f51f0973e349dcbc3f51ccfb143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nearby surrounding of current entity.  <a href="main_8c.html#ac6ed8f51f0973e349dcbc3f51ccfb143">More...</a><br /></td></tr>
+<tr class="separator:ac6ed8f51f0973e349dcbc3f51ccfb143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>LeonelMatos <a href="https://github.com/LeonelMatos">LeonelMatos's Github</a> </dd></dl>
@@ -302,8 +308,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Saves to the near array all entities near the given one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>current entity to check near </td></tr>
+    <tr><td class="paramname">map</td><td><br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
 <p>All positions near the entity</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>check if an entity is sitting at a border of the map </dd></dl>
 
 </div>
 </div>
@@ -497,6 +512,32 @@ Variables</h2></td></tr>
     <tr><td class="paramname">m</td><td>map area pointer </td></tr>
     <tr><td class="paramname">r</td><td>rows </td></tr>
     <tr><td class="paramname">c</td><td>columns </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2da344450a8a14563589ec56daf88457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da344450a8a14563589ec56daf88457">&#9670;&nbsp;</a></span>init_near()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_near </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>array</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initiates the near array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -750,6 +791,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>prints a small map of nearby entities </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>current entity </td></tr>
+    <tr><td class="paramname">map</td><td><br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a0d76938f657e113202fafc1632565bde"></a>
@@ -792,17 +843,19 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a13d276b2c881ade5640bbeb6993b34d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13d276b2c881ade5640bbeb6993b34d1">&#9670;&nbsp;</a></span>near</h2>
+<a id="ac6ed8f51f0973e349dcbc3f51ccfb143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ed8f51f0973e349dcbc3f51ccfb143">&#9670;&nbsp;</a></span>near</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char near[9] = {' '}</td>
+          <td class="memname">char near[8]</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Nearby surrounding of current entity. </p>
 
 </div>
 </div>
