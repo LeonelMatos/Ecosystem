@@ -38,6 +38,7 @@ typedef enum {
 
 
 /*ENTITIES*/
+
 #include "entities/rabbit.h"
 
 
@@ -218,12 +219,22 @@ void print_entities (Map *m) {
 
 /*ENTITY_BEHAVIOUR*/
 
-char near[9] = {' '};
+///@brief Nearby surrounding of current entity
+char near[8];
 
+///@brief Initiates the near array
+///@param array
+void init_near(char array[]) {
+	for (int i = 0; i < 8; i++)
+		array[i] = ' ';
+}
+
+///@brief Saves to the near array all entities near the given one
+///@param entity current entity to check near
+///@param map 
 void check_near (Entity *entity, Map *map) {
 	///All positions near the entity
 
-    ///\todo check if an entity is sitting at a border of the map
 	if (entity->pos.x != 0) {
 		if (entity->pos.y != 0)
     		near[0] = map->map[entity->pos.x-1][entity->pos.y-1];   //<^
@@ -245,13 +256,19 @@ void check_near (Entity *entity, Map *map) {
 	}
 }
 
+///@brief prints a small map of nearby entities
+///@param entity current entity
+///@param map 
 void print_near_entities(Entity *entity, Map *map) {
 	check_near(entity, map);
 	printf(B_GRN "Entities near %c[%d, %d]\n", entity->type, entity->pos.x, entity->pos.y);
 	reset_color();
 	for (int i = 0; i < 3; i++) 
 		printf("[%c]", near[i]);
-	printf("\n[%c][%c][%c]\n", near[3], entity->type, near[4]);
+	printf("\n[%c]", near[3]);
+	printf(B_GRN"[%c]", entity->type);
+	reset_color();
+	printf("[%c]\n", near[4]);
 	for (int i = 5; i < 8; i++)
 		printf("[%c]", near[i]);
 	printf("\n\n");
@@ -349,11 +366,14 @@ int main (int argc, char *argv[]) {
 
 	Map map;
 	Entity ent1 = init_entity(Rabbit, 1, 1);
-	Entity ent2 = init_entity(Fox, 4, 4);
+	Entity ent2 = init_entity(Fox, 0, 0);
+	Entity ent3 = init_entity(Fox, 1, 0);
 	
 	init_map(R, C, &map);
+	init_near(near);
 	place_entity(&ent1, &map);
 	place_entity(&ent2, &map);
+	place_entity(&ent3, &map);
 
 	generate_trees(TREE_FREQ, &map);
 
