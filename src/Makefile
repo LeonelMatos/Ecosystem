@@ -53,3 +53,8 @@ a.out : $(OBJECTS)
 profile : a.out # Uses gprof
 	./$<
 	gprof $< gmon.out > $(OUTPUT)
+
+clean :
+	@rm *.out
+	@rm $(OUTPUT)
+	@echo Cleaned the room
