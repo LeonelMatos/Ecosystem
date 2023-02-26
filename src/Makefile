@@ -5,7 +5,7 @@ SOURCEFILES = $(wildcard *.c)
 OBJECTS = $(SOURCEFILES:%.c=%.o)
 OUTPUT = profile_output.txt
 
-.PHONY: run rm help profile
+.PHONY: run rm help profile clean
 
 ecosystem : $(OBJECTS)
 	@$(CC) -o $@ $^ -Wall -Wextra -pedantic -std=c99
@@ -43,7 +43,8 @@ help :
 	@echo  "\t 	: Compiles the project"
 	@echo  "\trun	: Compiles and runs the project"
 	@echo  "\trm	: Removes the build and object files"
-	@echo "\tprofile: creates a .txt output file with results from profiling the program"
+	@echo "\tprofile: Creates a .txt output file with results from profiling the program"
+	@echo "\tclean	: Clears the junk files from profiling (gmon.out, *.txt)
 	@echo  "\tbuild	: Builds the program on \usr\bin\ after compiling"
 	@echo  "\thelp	: I'll leave you at that one.\n\n"
 

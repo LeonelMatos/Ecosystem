@@ -24,6 +24,8 @@ NULL     | compiles the files from /src/
 run      | execute the program after compiling it
 rm       | removes the built executable and any *.o files
 build    | builds on /usr/bin/ after compiling
+profile  | runs and tests the program, saving the results
+clean    | removes the built debug executable and any auxiliary file to profile
 help     | show options
 
 ## Example
@@ -48,6 +50,10 @@ help     | show options
 >
 >	build	: Builds the program on \usin\ after compiling
 >
+>	profile : Creates a .txt output file with results from profiling the program
+>
+>	clean	: Clears the junk files from profiling (gmon.out, *.txt)
+>
 >	help	: I'll leave you at that one.
 >
 
@@ -58,9 +64,4 @@ Variables | Value | Description
 CC        | gcc   | C project compiler
 SOURCEFILES | $(wildcard *.c) | Additional code files (ex:entity.c)
 OBJECTS   | $(SOURCEFILES:%.c=%.o) | Compiled SOURCEFILES
-
-
-# TODO
-
-\todo Create a profiling option
-\todo Create a clean option to remove text files from profiling
+OUTPUT	  | OUTPUT | Text file name to output the profiling results

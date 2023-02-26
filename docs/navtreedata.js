@@ -41,8 +41,7 @@ var NAVTREE =
         [ "Example", "makefile.html#autotoc_md10", null ]
       ] ],
       [ "Make Help", "makefile.html#autotoc_md11", null ],
-      [ "Variables", "makefile.html#autotoc_md12", null ],
-      [ "TODO", "makefile.html#autotoc_md13", null ]
+      [ "Variables", "makefile.html#autotoc_md12", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Bug List", "bug.html", null ],

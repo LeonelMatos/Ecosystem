@@ -111,6 +111,10 @@ List of commands</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">build   </td><td class="markdownTableBodyLeft">builds on /usr/bin/ after compiling    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">profile   </td><td class="markdownTableBodyLeft">runs and tests the program, saving the results    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">clean   </td><td class="markdownTableBodyLeft">removes the built debug executable and any auxiliary file to profile    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">help   </td><td class="markdownTableBodyLeft">show options   </td></tr>
 </table>
 <h2><a class="anchor" id="autotoc_md10"></a>
@@ -127,6 +131,8 @@ Make Help</h1>
 <p>run : Compiles and runs the project</p>
 <p>rm : Removes the build and object files</p>
 <p>build : Builds the program on \usin\ after compiling</p>
+<p>profile : Creates a .txt output file with results from profiling the program</p>
+<p>clean : Clears the junk files from profiling (gmon.out, *.txt)</p>
 <p>help : I'll leave you at that one.</p>
 <p></p>
 </blockquote>
@@ -140,13 +146,10 @@ Variables</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">SOURCEFILES   </td><td class="markdownTableBodyCenter">$(wildcard *.c)   </td><td class="markdownTableBodyLeft">Additional code files (ex:entity.c)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">OBJECTS   </td><td class="markdownTableBodyCenter">$(SOURCEFILES:%.c=%.o)   </td><td class="markdownTableBodyLeft">Compiled SOURCEFILES   </td></tr>
+<td class="markdownTableBodyCenter">OBJECTS   </td><td class="markdownTableBodyCenter">$(SOURCEFILES:%.c=%.o)   </td><td class="markdownTableBodyLeft">Compiled SOURCEFILES    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">OUTPUT   </td><td class="markdownTableBodyCenter">OUTPUT   </td><td class="markdownTableBodyLeft">Text file name to output the profiling results   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md13"></a>
-TODO</h1>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd><p class="startdd">Create a profiling option </p>
-<p class="enddd">Create a clean option to remove text files from profiling </p>
-</dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
