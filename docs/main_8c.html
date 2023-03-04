@@ -102,7 +102,6 @@ $(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); })
 <code>#include &lt;time.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="entity_8h_source.html">entity.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="warning_8h_source.html">warning.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="rabbit_8h_source.html">entities/rabbit.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
@@ -173,6 +172,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ad46ef29374a013800b9dd162a76069bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad46ef29374a013800b9dd162a76069bc">print_near_entities</a> (<a class="el" href="structEntity.html">Entity</a> *entity, <a class="el" href="structMap.html">Map</a> *map)</td></tr>
 <tr class="memdesc:ad46ef29374a013800b9dd162a76069bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints a small map of nearby entities  <a href="main_8c.html#ad46ef29374a013800b9dd162a76069bc">More...</a><br /></td></tr>
 <tr class="separator:ad46ef29374a013800b9dd162a76069bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b75a40434ebd2d79436589f22e21d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab2b75a40434ebd2d79436589f22e21d8">entity_turn</a> (<a class="el" href="structEntity.html">Entity</a> *entity, <a class="el" href="structMap.html">Map</a> *map)</td></tr>
+<tr class="separator:ab2b75a40434ebd2d79436589f22e21d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b94ddd82f4533f47c71751e35bea6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">init_map</a> (int r, int c, <a class="el" href="structMap.html">Map</a> *m)</td></tr>
 <tr class="memdesc:ac2b94ddd82f4533f47c71751e35bea6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates the map area.  <a href="main_8c.html#ac2b94ddd82f4533f47c71751e35bea6f">More...</a><br /></td></tr>
 <tr class="separator:ac2b94ddd82f4533f47c71751e35bea6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,8 +196,8 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>LeonelMatos <a href="https://github.com/LeonelMatos">LeonelMatos's Github</a> </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.0.4 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2023-01-30 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.0.5 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2023-03-04 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ac4cf4b2ab929bd23951a8676eeac086b"></a>
@@ -362,6 +363,34 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ab2b75a40434ebd2d79436589f22e21d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b75a40434ebd2d79436589f22e21d8">&#9670;&nbsp;</a></span>entity_turn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void entity_turn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structEntity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structMap.html">Map</a> *&#160;</td>
+          <td class="paramname"><em>map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a873be6cfb10cb7fdb36221851bd837a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a873be6cfb10cb7fdb36221851bd837a8">&#9670;&nbsp;</a></span>generate_trees()</h2>
 
@@ -425,7 +454,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>index of the entity. -1 if not found </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Still broken. Figure it out idk. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Still broken. Figure it out idk. </dd></dl>
 
 </div>
 </div>
@@ -629,7 +658,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000003">Bug:</a></b></dt><dd>Last implementation broke the output of draw_map </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000003">Bug:</a></b></dt><dd>Last implementation broke the output of draw_map (unsure if already fixed) </dd></dl>
 
 </div>
 </div>
@@ -820,7 +849,7 @@ Variables</h2></td></tr>
 
 <p>Reads a key from STDIN_FILENO. </p>
 <dl class="section return"><dt>Returns</dt><dd>Char pressed key </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>check if I can change this to avoid pressing ENTER every time </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>check if I can change this to avoid pressing ENTER every time </dd></dl>
 
 </div>
 </div>
@@ -856,6 +885,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Nearby surrounding of current entity. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Add way to read file behaviour </dd></dl>
 
 </div>
 </div>

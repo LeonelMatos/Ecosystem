@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['near_123',['near',['../main_8c.html#ac6ed8f51f0973e349dcbc3f51ccfb143',1,'main.c']]],
-  ['num_5fentities_124',['num_entities',['../structMap.html#a04168bdc0775891cfe0a94cce5a1c668',1,'Map']]]
+  ['ticks_121',['ticks',['../main_8c.html#a7fb737f221054b95454d8c4b04a23372',1,'main.c']]],
+  ['time_5fscale_122',['time_scale',['../main_8c.html#a368510152543695bee4b6f14f53f8acf',1,'main.c']]],
+  ['type_123',['type',['../structEntity.html#a9037dc23f14d427789111f9eb7d0b3df',1,'Entity']]]
 ];

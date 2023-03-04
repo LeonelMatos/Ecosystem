@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['health_120',['health',['../rabbit_8h.html#ae448fb16f537982185a0c5e8db56bdc6',1,'rabbit.h']]],
-  ['hunger_121',['hunger',['../rabbit_8h.html#a8fe7282c25291bd320a69996d9fcc923',1,'rabbit.h']]]
+  ['near_118',['near',['../main_8c.html#ac6ed8f51f0973e349dcbc3f51ccfb143',1,'main.c']]],
+  ['num_5fentities_119',['num_entities',['../structMap.html#a04168bdc0775891cfe0a94cce5a1c668',1,'Map']]]
 ];

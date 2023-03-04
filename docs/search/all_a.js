@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['left_40',['LEFT',['../main_8c.html#a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065',1,'main.c']]]
+  ['near_51',['near',['../main_8c.html#ac6ed8f51f0973e349dcbc3f51ccfb143',1,'main.c']]],
+  ['num_5fentities_52',['num_entities',['../structMap.html#a04168bdc0775891cfe0a94cce5a1c668',1,'Map']]]
 ];

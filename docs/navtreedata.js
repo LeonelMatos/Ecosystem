@@ -25,26 +25,33 @@
 var NAVTREE =
 [
   [ "Ecosystem", "index.html", [
-    [ "Ecosystem: The Documentation", "index.html#autotoc_md0", [
-      [ "Introduction", "index.html#autotoc_md1", null ],
-      [ "Motivation", "index.html#autotoc_md2", null ]
+    [ "Ecosystem: The Documentation", "index.html#autotoc_md7", [
+      [ "Introduction", "index.html#autotoc_md8", null ],
+      [ "Motivation", "index.html#autotoc_md9", null ]
     ] ],
-    [ "Links", "index.html#autotoc_md3", null ],
-    [ "Author", "index.html#autotoc_md4", [
-      [ "Info", "index.html#autotoc_md5", null ]
+    [ "Links", "index.html#autotoc_md10", null ],
+    [ "Author", "index.html#autotoc_md11", [
+      [ "Info", "index.html#autotoc_md12", null ]
+    ] ],
+    [ "Behaviour", "behaviour.html", [
+      [ "Introduction", "behaviour.html#autotoc_md1", [
+        [ "Behaviour Guide", "behaviour.html#autotoc_md0", null ],
+        [ "The File", "behaviour.html#autotoc_md2", null ]
+      ] ],
+      [ "Organization", "behaviour.html#autotoc_md3", null ]
     ] ],
     [ "Makefile", "makefile.html", [
-      [ "Introduction", "makefile.html#autotoc_md7", null ],
-      [ "How to Run", "makefile.html#autotoc_md8", null ],
-      [ "List of commands", "makefile.html#autotoc_md9", [
-        [ "Makefile Guide", "makefile.html#autotoc_md6", null ],
-        [ "Example", "makefile.html#autotoc_md10", null ]
+      [ "Introduction", "makefile.html#autotoc_md14", null ],
+      [ "How to Run", "makefile.html#autotoc_md15", null ],
+      [ "List of commands", "makefile.html#autotoc_md16", [
+        [ "Makefile Guide", "makefile.html#autotoc_md13", null ],
+        [ "Example", "makefile.html#autotoc_md17", null ]
       ] ],
-      [ "Make Help", "makefile.html#autotoc_md11", null ],
-      [ "Variables", "makefile.html#autotoc_md12", null ]
+      [ "Make Help", "makefile.html#autotoc_md18", null ],
+      [ "Variables", "makefile.html#autotoc_md19", null ]
     ] ],
-    [ "Todo List", "todo.html", null ],
     [ "Bug List", "bug.html", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

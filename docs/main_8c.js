@@ -16,6 +16,7 @@ var main_8c =
     ] ],
     [ "check_near", "main_8c.html#a21807d2cb001dc95c0c2fc8c7e0b9bad", null ],
     [ "draw_map", "main_8c.html#aeeb4f4e40c105bf4dfdd586c4ecefad7", null ],
+    [ "entity_turn", "main_8c.html#ab2b75a40434ebd2d79436589f22e21d8", null ],
     [ "generate_trees", "main_8c.html#a873be6cfb10cb7fdb36221851bd837a8", null ],
     [ "get_index", "main_8c.html#a8c52683734a41a3cc64bb5269bddda22", null ],
     [ "init_entity", "main_8c.html#a943ba7af71dd932c60a72c44243f6c36", null ],

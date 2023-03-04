@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['health_32',['health',['../rabbit_8h.html#ae448fb16f537982185a0c5e8db56bdc6',1,'rabbit.h']]],
-  ['hunger_33',['hunger',['../rabbit_8h.html#a8fe7282c25291bd320a69996d9fcc923',1,'rabbit.h']]]
+  ['kill_37',['kill',['../main_8c.html#a9a54f17884b9d094426279cc76bc67a5',1,'main.c']]],
+  ['kill_5fentity_38',['kill_entity',['../main_8c.html#a0ab27a92d42b46ea57105757145e223d',1,'main.c']]]
 ];
