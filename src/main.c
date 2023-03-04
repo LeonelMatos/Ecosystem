@@ -1,8 +1,8 @@
 /**
  * @file main.c
  * @author LeonelMatos [LeonelMatos's Github](https://github.com/LeonelMatos)
- * @version 0.0.4
- * @date 2023-01-30
+ * @version 0.0.5
+ * @date 2023-03-04
  * @copyright Copyright (c) 2023
  */
 
@@ -214,6 +214,8 @@ void print_entities (Map *m) {
 
 /*ENTITY_BEHAVIOUR*/
 
+///\todo Add way to read file behaviour
+
 ///@brief Nearby surrounding of current entity
 char near[8];
 
@@ -381,7 +383,7 @@ int main (int argc, char *argv[]) {
 
 	draw_map(R, C, map.map, repr);
 
-	///\bug Last implementation broke the output of draw_map
+	///\bug Last implementation broke the output of draw_map (unsure if already fixed)
 	print_near_entities(&ent2, &map);
 
 	//print_entities(&map);
