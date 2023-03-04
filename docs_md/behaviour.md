@@ -55,3 +55,11 @@ In example 1) would the the `2`. In example 2) is `1`.
 ### Separation
 
 Knowing that the program will read each line, needing to separate each value, these will be between a **'|' (pipe character)**
+
+# Info
+
+\b Behaviour
+
+\version 1
+
+\date 04-03-2023

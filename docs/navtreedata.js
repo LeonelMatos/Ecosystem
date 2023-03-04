@@ -25,30 +25,31 @@
 var NAVTREE =
 [
   [ "Ecosystem", "index.html", [
-    [ "Ecosystem: The Documentation", "index.html#autotoc_md7", [
-      [ "Introduction", "index.html#autotoc_md8", null ],
-      [ "Motivation", "index.html#autotoc_md9", null ]
+    [ "Ecosystem: The Documentation", "index.html#autotoc_md8", [
+      [ "Introduction", "index.html#autotoc_md9", null ],
+      [ "Motivation", "index.html#autotoc_md10", null ]
     ] ],
-    [ "Links", "index.html#autotoc_md10", null ],
-    [ "Author", "index.html#autotoc_md11", [
-      [ "Info", "index.html#autotoc_md12", null ]
+    [ "Links", "index.html#autotoc_md11", null ],
+    [ "Author", "index.html#autotoc_md12", [
+      [ "Info", "index.html#autotoc_md13", null ]
     ] ],
     [ "Behaviour", "behaviour.html", [
       [ "Introduction", "behaviour.html#autotoc_md1", [
         [ "Behaviour Guide", "behaviour.html#autotoc_md0", null ],
         [ "The File", "behaviour.html#autotoc_md2", null ]
       ] ],
-      [ "Organization", "behaviour.html#autotoc_md3", null ]
+      [ "Organization", "behaviour.html#autotoc_md3", null ],
+      [ "Info", "behaviour.html#autotoc_md7", null ]
     ] ],
     [ "Makefile", "makefile.html", [
-      [ "Introduction", "makefile.html#autotoc_md14", null ],
-      [ "How to Run", "makefile.html#autotoc_md15", null ],
-      [ "List of commands", "makefile.html#autotoc_md16", [
-        [ "Makefile Guide", "makefile.html#autotoc_md13", null ],
-        [ "Example", "makefile.html#autotoc_md17", null ]
+      [ "Introduction", "makefile.html#autotoc_md15", null ],
+      [ "How to Run", "makefile.html#autotoc_md16", null ],
+      [ "List of commands", "makefile.html#autotoc_md17", [
+        [ "Makefile Guide", "makefile.html#autotoc_md14", null ],
+        [ "Example", "makefile.html#autotoc_md18", null ]
       ] ],
-      [ "Make Help", "makefile.html#autotoc_md18", null ],
-      [ "Variables", "makefile.html#autotoc_md19", null ]
+      [ "Make Help", "makefile.html#autotoc_md19", null ],
+      [ "Variables", "makefile.html#autotoc_md20", null ]
     ] ],
     [ "Bug List", "bug.html", null ],
     [ "Todo List", "todo.html", null ],
