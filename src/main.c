@@ -37,11 +37,6 @@ typedef enum {
 } Direction;
 
 
-/*ENTITIES*/
-
-#include "entities/rabbit.h"
-
-
 /*DATA*/
 
 /** \bug Deprecated (the first lines of code)
@@ -273,6 +268,13 @@ void print_near_entities(Entity *entity, Map *map) {
 		printf("[%c]", near[i]);
 	printf("\n\n");
 
+}
+
+void entity_turn (Entity *entity, Map *map) {
+	
+	check_near(&entity, &map);
+
+	//if ()
 }
 
 
