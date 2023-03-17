@@ -2,14 +2,17 @@
 *.o
 *.obj
 
-
 # Profiling
 *.txt
 
 # Executables
 *.out
 *.exe
+ecosystem
 
 # Others
 *.mod*
 *.cmd
+
+# VS Code
+/.vscode
