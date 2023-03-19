@@ -1,7 +1,7 @@
 /**
  * @file main.c
  * @author LeonelMatos [LeonelMatos's Github](https://github.com/LeonelMatos)
- * @version 0.0.5
+ * @version 0.0.4
  * @date 2023-03-04
  * @copyright Copyright (c) 2023
  */

@@ -65,3 +65,10 @@ CC        | gcc   | C project compiler
 SOURCEFILES | $(wildcard *.c) | Additional code files (ex:entity.c)
 OBJECTS   | $(SOURCEFILES:%.c=%.o) | Compiled SOURCEFILES
 OUTPUT	  | OUTPUT | Text file name to output the profiling results
+
+## Info
+
+\b Makefile
+
+\version 1
+\date 04-03-2023

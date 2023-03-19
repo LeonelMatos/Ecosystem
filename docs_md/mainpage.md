@@ -4,7 +4,7 @@
 
 # Ecosystem: The Documentation
 
-\version 0.0.3
+\version 0.0.4
 
 ## Introduction
 
@@ -23,10 +23,6 @@ brain.
 
 ![Screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yfeqc3ggkr2q0mjjtgkc.png)
 
-# Links
-
-- TODO : links
-
 # Author
 
 - [LeonelMatos](https://github.com/LeonelMatos) \emoji :portugal:
@@ -41,4 +37,3 @@ brain.
 \version 2
 \date 09-01-2023
 
-~~19-11-2022~~

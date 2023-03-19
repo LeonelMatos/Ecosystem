@@ -5,6 +5,8 @@ Behaviour Guide
 
 # Introduction
 
+**This is still a concept, it will change**
+
 Behaviour is a group of statistics for every entity in the project that will be collected during runtime by defining a collection of actions and behaviour of entities based on their given specific values (such as what to eat, who to run away from, etc...).
 
 This page will explain in detail the set of rules and how they work to give a better understanding on how to build upon the Behaviour and define future entities.
@@ -60,6 +62,6 @@ Knowing that the program will read each line, needing to separate each value, th
 
 \b Behaviour
 
-\version 1
+\version 2
 
-\date 04-03-2023
+\date 19-03-2023
